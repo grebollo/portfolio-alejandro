@@ -1,8 +1,0 @@
-services:
-  nginx:
-    image: nginx
-    ports:
-      - 8089:80
-    volumes:
-      - ./mime.types:/etc/nginx/mime.types
-      - ./dist/:/usr/share/nginx/html
