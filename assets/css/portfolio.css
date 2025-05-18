@@ -57,10 +57,10 @@ GENERALES
   --primary-color: #000;
   --secondary-color: #676767;
   --tertiary-color: #D8D8D8;
-  --padding-top: 1.25rem;
-  --padding-left: 1.25rem;
-  --padding-right: 1.25rem;
-  --padding-bottom: 1.25rem;
+  --padding-top: 20px;
+  --padding-left: 20px;
+  --padding-right: 20px;
+  --padding-bottom: 20px;
   --project-template-columns: 6;
   font-size: 62.5%;
 }
@@ -145,16 +145,19 @@ hr {
 }
 
 .mt-13 {
-  margin-top: 0.813rem;
+  margin-top: 13px;
 }
 
 .mb-13 {
-  margin-bottom: 0.813rem;
+  margin-bottom: 13px;
 }
 
 /* -----------------------------------------------------------------------
 CABECERA
 -------------------------------------------------------------------------- */
+header .sub-element {
+  font-size: 1.8rem;
+}
 nav#main-menu {
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
 }
@@ -162,7 +165,7 @@ nav#main-menu > div#brand-container {
   justify-content: left;
 }
 nav#main-menu > div#brand-container > img#brand {
-  max-width: 2.938rem;
+  max-width: 47px;
 }
 nav#main-menu > div#contact-container {
   justify-content: right;
@@ -175,8 +178,8 @@ nav#main-menu > div#contact-container > div.contact-item {
 CONTENIDO PRINCIPAL
 -------------------------------------------------------------------------- */
 section.main-section {
-  --padding-top: 3.125rem;
-  --padding-bottom: 3.125rem;
+  --padding-top: 50px;
+  --padding-bottom: 50px;
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
 }
 section.main-section > div.section-title {
@@ -186,34 +189,39 @@ section.main-section > div.section-title {
 }
 section.main-section .flex-col {
   width: 33.3%;
-  padding-right: 2.25rem;
+  padding-right: 36pxs;
 }
 
 section#author-description-container {
-  --padding-top: 15.625rem;
+  --padding-top: 297px;
+  --padding-bottom: 30px;
   width: 45%;
 }
 
 section#author-projects-container-pc {
-  --gap: 3.125rem;
+  --padding-top: 30px;
+  --padding-bottom: 70px;
+  --gap: 50px;
   display: grid;
   grid-template-columns: repeat(var(--project-template-columns), 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 0.625rem;
+  grid-column-gap: 10px;
   grid-row-gap: var(--gap);
 }
 section#author-projects-container-pc .h3{
   line-height: 1;
-  margin-top: 0.875rem;
+  margin-top: 15px;
 }
 
 #author-projects-container-pc > figure {
   display: block;
 }
-
+figcaption {
+  font-size: 1.4rem;
+}
 
 section#author-projects-container-mobile > div.author-projects-row:not(:first-child) {
-  --gap: 3.125rem;
+  --gap: 50px;
   margin-top: var(--gap);
 }
 
@@ -225,6 +233,8 @@ section#author-selected-work-container > div#author-selected-work-content > tabl
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  font-size: 1.4rem;
+  line-height: 16px;
 }
 section#author-selected-work-container > div#author-selected-work-content > table tr:not(:first-child) {
   border-top: 1px solid var(--tertiary-color);
@@ -237,7 +247,7 @@ section#author-selected-work-container > div#author-selected-work-content > tabl
   font-weight: 500;
 }
 section#author-selected-work-container > div#author-selected-work-content > table th, section#author-selected-work-container > div#author-selected-work-content > table td {
-  --padding: 0.625rem;
+  --padding: 10px;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
 }
@@ -246,26 +256,46 @@ section#author-selected-work-container > div#author-selected-work-content > tabl
 }
 
 section#author-experience-capabilities-container > div#author-experience-capabilities-content > div.author-capability > div.author-capability-content {
-  margin-top: 1.25rem;
+  margin-top: 14px;
 }
 section#author-experience-capabilities-container > div#author-experience-capabilities-content > div.author-capability > div.author-capability-content .badge {
-  --gap: 0.625rem;
+  --gap: 10px;
   display: inline-block;
-  margin: 0 0.156rem 0.438rem 0;
-  padding: 0.5rem 1.375rem;
+  margin: 0 2.5px 7px 0;
+  padding: 8px 22px;
   border: 1px solid var(--secondary-color);
-  border-radius: 2.438rem;
+  border-radius: 39.008px;
   color: var(--secondary-color);
+}
+
+.author-capability-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+section#author-experience-capabilities-container {
+  --padding-top: 70px;
+  --padding-bottom: 112px
 }
 
 div.divider {
   padding: 0 var(--padding-right) 0 var(--padding-left);
 }
 
+section#author-playful-balance-container {
+  --padding-top: 100px;
+  --padding-bottom: 134px;
+}
 /* -----------------------------------------------------------------------
 FOOTER
 -------------------------------------------------------------------------- */
 footer {
+  font-size: 1.8rem;
+  line-height: 24px;
+  --padding-bottom: 72px;
+  --padding-top: 72px;
   padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
 }
 footer > nav > div.footer-items-container {
@@ -277,13 +307,10 @@ footer > nav > div.footer-items-container > div.footer-item {
 .icon-inline {
   width: 1rem;
   height: 1rem;
-  margin-left: 0.4rem;
-  vertical-align: middle;
 }
 
-.footer-item a img:first-child {
-  margin-right: 0.4rem;
-  margin-left: 0.4rem;
+.footer-item a.d-flex {
+  gap: 6px;        
 }
 
 /* -----------------------------------------------------------------------
@@ -291,7 +318,7 @@ RESPONSIVE
 -------------------------------------------------------------------------- */
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
   section#author-description-container {
-    --padding-top: 4.688rem;
+    --padding-top: 75.008px;
     width: 60%;
   }
   section#author-playful-balance-container > div#author-playful-balance-content > div#author-playful-balance-content-text {
@@ -301,7 +328,7 @@ RESPONSIVE
   }
   div#author-experience-capabilities__branding {
     max-width: 443px;
-    padding-right: 14.25rem;
+    padding-right: 228px;
   }
   
 }
@@ -313,26 +340,26 @@ RESPONSIVE
     display: inherit;
   }
   section#author-experience-capabilities-container > div#author-experience-capabilities-content > div.author-capability > div.author-capability-content .badge {
-    padding: 0.5rem 0.875rem;
+    padding: 8px 14px;
   }
   section#author-projects-container-mobile {
     --padding-right: 0;
   }
   div#author-experience-capabilities__branding {
     max-width: 314px;
-    padding-right: 5rem;
+    padding-right: 80px;
   }
 }
 
 @media screen and (max-width: 1300px) {
   div#author-experience-capabilities__branding {
     max-width: 100%;
-    padding-right: 2.25rem;
+    padding-right: 36px;
   }
 }
 @media screen and (min-width: 441px) and (max-width: 1440px) {
   section#author-description-container {
-    --padding-top: 4.688rem;
+    --padding-top: 75.008rem;
     width: 75%;
   }
 }
@@ -355,8 +382,8 @@ RESPONSIVE
     width: 100% !important;
   }
   nav#main-menu {
-    --padding-left: 0.625rem;
-    --padding-right: 0.625rem;
+    --padding-left: 10px;
+    --padding-right: 10px;
   }
   nav#main-menu > div#contact-container {
     flex-direction: column;
@@ -365,40 +392,40 @@ RESPONSIVE
     margin-left: auto;
   }
   section#author-description-container {
-    --padding-top: 5rem;
-    --padding-bottom: 2rem;
+    --padding-top: 80px;
+    --padding-bottom: 32px;
     width: 100%;
   }
   footer > nav > div.footer-items-container > div.footer-item {
     padding-top: var(--padding-top);
   }
   section.main-section {
-    --padding-top: 1.875rem;
-    --padding-bottom: 1.875rem;
-    --padding-left: 0.75rem;
-    --padding-right: 0.75rem;
+    --padding-top: 30px;
+    --padding-bottom: 30px;
+    --padding-left: 12px;
+    --padding-right: 12px;
   }
   section#author-experience-capabilities-container {
-    --padding-bottom: 2.375rem;
+    --padding-bottom: 38px;
  }
  section#author-playful-balance-container {
-   --padding-top: 2.375rem;
+   --padding-top: 38px;
  }
   section#author-projects-container-mobile,div#author-playful-balance-content-text {
     --padding-top:0;
   }
   div.divider {
-    --padding-left: 0.625rem;
-    --padding-right: 0.625rem;
+    --padding-left: 10px;
+    --padding-right: 10px;
   }
   section#author-playful-balance-container {
-    --padding-bottom: 3.25rem;
+    --padding-bottom: 52px;
   }
   footer {
-    --padding-top:0.75rem;
+    --padding-top:12px;
   }
   footer > nav > div.footer-items-container > div.footer-item {
-    --padding-top:1.25rem;
+    --padding-top:20px;
   }
 
 }
