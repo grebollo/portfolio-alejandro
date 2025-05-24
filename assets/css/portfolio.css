@@ -254,6 +254,15 @@ section#author-selected-work-container > div#author-selected-work-content > tabl
 section#author-selected-work-container > div#author-selected-work-content > table td {
   color: var(--secondary-color);
 }
+section#author-selected-work-container > div#author-selected-work-content > table tr {
+  transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  cursor: default;
+}
+
+section#author-selected-work-container > div#author-selected-work-content > table tr:hover td{
+  color: var(--primary-color);
+  font-weight: 500;
+}
 
 section#author-experience-capabilities-container > div#author-experience-capabilities-content > div.author-capability > div.author-capability-content {
   margin-top: 14px;
@@ -288,6 +297,18 @@ section#author-playful-balance-container {
   --padding-top: 100px;
   --padding-bottom: 134px;
 }
+
+div#author-experience-capabilities-content, #author-playful-balance-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#author-playful-balance-content-image {
+  grid-column: span 1;
+}
+#author-playful-balance-content-text {
+  grid-column: span 2;
+  width: 100%; 
+}
 /* -----------------------------------------------------------------------
 FOOTER
 -------------------------------------------------------------------------- */
@@ -316,56 +337,45 @@ footer > nav > div.footer-items-container > div.footer-item {
 /* -----------------------------------------------------------------------
 RESPONSIVE
 -------------------------------------------------------------------------- */
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-  section#author-description-container {
-    --padding-top: 75.008px;
-    width: 60%;
+@media screen and (max-width: 2560px) and (min-width: 1921px) {
+  #author-experience-capabilities-content {
+    gap: 130px;
   }
-  section#author-playful-balance-container > div#author-playful-balance-content > div#author-playful-balance-content-text {
-    width: 100%;
-    max-width: 673px;
-    align-items: center;
+  #author-playful-balance-content {
+    gap: 139px;
   }
-  div#author-experience-capabilities__branding {
-    max-width: 443px;
-    padding-right: 228px;
-  }
-  
 }
+
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  #author-experience-capabilities-content {
+    gap: 96px;
+  }
+  #author-playful-balance-content {
+    gap: 105px;
+  }
+}
+
 @media screen and (max-width: 1440px) {
-  .is-pc {
-    display: none !important;
+  #author-experience-capabilities-content {
+    gap: 94px;
   }
-  .is-mobile {
-    display: inherit;
-  }
-  section#author-experience-capabilities-container > div#author-experience-capabilities-content > div.author-capability > div.author-capability-content .badge {
-    padding: 8px 14px;
-  }
-  section#author-projects-container-mobile {
-    --padding-right: 0;
-  }
-  div#author-experience-capabilities__branding {
-    max-width: 314px;
-    padding-right: 80px;
+  #author-playful-balance-content {
+    gap: 45px;
   }
 }
 
-@media screen and (max-width: 1300px) {
-  div#author-experience-capabilities__branding {
-    max-width: 100%;
-    padding-right: 36px;
+@media (max-width: 1023px) {
+  div#author-experience-capabilities-content,
+  #author-playful-balance-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
-}
-@media screen and (min-width: 441px) and (max-width: 1440px) {
-  section#author-description-container {
-    --padding-top: 75.008rem;
-    width: 75%;
-  }
-}
 
-@media screen and (max-width: 440px) {
-  .flex-start-mobile {
+  #author-playful-balance-content-image,
+  #author-playful-balance-content-text {
+    grid-column: auto;
+  }
+   .flex-start-mobile {
     justify-content: flex-start;
   }
   .collumnable-item {
@@ -385,11 +395,16 @@ RESPONSIVE
     --padding-left: 10px;
     --padding-right: 10px;
   }
+  nav#main-menu {
+    display: flex;
+    justify-content: space-between;
+  }
   nav#main-menu > div#contact-container {
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
+    width: auto;
     margin-left: auto;
+    margin-right: 44px;
   }
   section#author-description-container {
     --padding-top: 80px;
@@ -404,6 +419,12 @@ RESPONSIVE
     --padding-bottom: 30px;
     --padding-left: 12px;
     --padding-right: 12px;
+  }
+  section#author-description-container {
+    --padding-right: 29px;
+  }
+  section#author-experience-capabilities-container {
+    --padding-top: 29px;
   }
   section#author-experience-capabilities-container {
     --padding-bottom: 38px;
@@ -427,8 +448,50 @@ RESPONSIVE
   footer > nav > div.footer-items-container > div.footer-item {
     --padding-top:20px;
   }
+  div#author-experience-capabilities-title {
+    padding-bottom: 25px;
+  }
 
 }
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  section#author-description-container {
+    --padding-top: 75.008px;
+    width: 60%;
+  }
+  section#author-playful-balance-container > div#author-playful-balance-content > div#author-playful-balance-content-text {
+    width: 100%;
+    max-width: 673px;
+    align-items: center;
+  }
+  
+  
+}
+@media screen and (max-width: 1440px) {
+  .is-pc {
+    display: none !important;
+  }
+  .is-mobile {
+    display: inherit;
+  }
+  section#author-experience-capabilities-container > div#author-experience-capabilities-content > div.author-capability > div.author-capability-content .badge {
+    padding: 8px 14px;
+  }
+  section#author-projects-container-mobile {
+    --padding-right: 0;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  section#author-description-container {
+    --padding-top: 237px;
+    width: 75%;
+  }
+}
+
+
 /**
  * Swiper 11.2.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
