@@ -37,7 +37,7 @@ import Swiper from './swiper/swiper-bundle.min.mjs';
                           direction: 'horizontal',
                           loop: true,
                           slidesPerView: 'auto',
-                          spaceBetween: 10
+                          spaceBetween: 5
                       });
                     }
                 });
