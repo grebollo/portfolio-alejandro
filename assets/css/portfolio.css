@@ -247,8 +247,13 @@ section#author-selected-work-container > div#author-selected-work-content > tabl
   font-weight: 500;
 }
 section#author-selected-work-container > div#author-selected-work-content > table th, section#author-selected-work-container > div#author-selected-work-content > table td {
-  padding-top: 1.188rem;
   padding-bottom: 1.063rem;
+}
+section#author-selected-work-container > div#author-selected-work-content > table th {
+  padding-top: 0;
+}
+section#author-selected-work-container > div#author-selected-work-content > table td {
+  padding-top: 1.188rem;
 }
 section#author-selected-work-container > div#author-selected-work-content > table td {
   color: var(--secondary-color);
@@ -294,7 +299,7 @@ section#author-experience-capabilities-container > div#author-experience-capabil
 
 section#author-experience-capabilities-container {
   --padding-top: 4.375rem;
-  --padding-bottom: 7rem;
+  --padding-bottom: 5.438rem;
 }
 
 div.divider {
@@ -302,8 +307,8 @@ div.divider {
 }
 
 section#author-playful-balance-container {
-  --padding-top: 6.188rem;
-  --padding-bottom: 8.375rem;
+  --padding-top: 5.188rem;
+  --padding-bottom: 6.375rem;
 }
 
 div#author-experience-capabilities-content, #author-playful-balance-content {
@@ -312,6 +317,7 @@ div#author-experience-capabilities-content, #author-playful-balance-content {
 }
 #author-playful-balance-content-image {
   grid-column: span 1;
+  margin-top: -2.625rem;
 }
 #author-playful-balance-content-text {
   grid-column: span 2;
@@ -387,7 +393,7 @@ RESPONSIVE
     gap: 6.563rem;
   }
    section#author-description-container {
-    --padding-top: 7.313rem;
+    --padding-top: 18.563rem;
     width: 60%;
   }
   section#author-playful-balance-container > div#author-playful-balance-content > div#author-playful-balance-content-text {
@@ -426,7 +432,7 @@ RESPONSIVE
   }
   section#author-experience-capabilities-container {
     --padding-top: 4.375rem;
-    --padding-bottom: 4.688rem;
+    --padding-bottom: 5.438rem;
   }
   section#author-projects-container-mobile > div.author-projects-row:not(:first-child) {
     --gap: 4.25rem;
